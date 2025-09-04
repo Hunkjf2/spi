@@ -1,4 +1,4 @@
-package br.com.techlead.selo_nivel_gov_br_spi;
+package br.com.teste.selo_nivel_gov_br_spi;
 
 import org.keycloak.Config;
 import org.keycloak.authentication.Authenticator;

@@ -1,6 +1,6 @@
-package br.com.techlead.selo_nivel_gov_br_spi;
+package br.com.teste.selo_nivel_gov_br_spi;
 
-import br.com.techlead.selo_nivel_gov_br_spi.service.GovBrService;
+import br.com.teste.selo_nivel_gov_br_spi.service.GovBrService;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.AuthenticationFlowError;
 import org.keycloak.authentication.Authenticator;

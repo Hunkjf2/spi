@@ -1,6 +1,6 @@
-package br.com.techlead.selo_nivel_gov_br_spi.service;
+package br.com.teste.selo_nivel_gov_br_spi.service;
 
-import br.com.techlead.selo_nivel_gov_br_spi.infrastructure.http.GovBrHttpClient;
+import br.com.teste.selo_nivel_gov_br_spi.infrastructure.http.GovBrHttpClient;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.UserModel;

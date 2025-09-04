@@ -1,4 +1,4 @@
-package br.com.techlead.selo_nivel_gov_br_spi.infrastructure.http;
+package br.com.teste.selo_nivel_gov_br_spi.infrastructure.http;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
