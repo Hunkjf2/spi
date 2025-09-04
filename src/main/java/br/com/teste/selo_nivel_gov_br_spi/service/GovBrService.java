@@ -13,8 +13,8 @@ public class GovBrService {
     private final KeycloakSession session;
     private final GovBrHttpClient httpClient;
 
-    private static final String NIVEL_URL = "https://nivel-loginpa.openshift.homologar.prodepa.pa.gov.br/v1/govbr/nivel";
-    private static final String SELO_URL = "https://confiabilidade-loginpa.openshift.homologar.prodepa.pa.gov.br/v1/govbr/confiabilidade";
+    private static final String NIVEL_URL = "https://sso.govbr/v1/govbr/nivel";
+    private static final String SELO_URL = "https://sso.govbr/v1/govbr/confiabilidade";
 
     public GovBrService(KeycloakSession session) {
         this.session = session;
