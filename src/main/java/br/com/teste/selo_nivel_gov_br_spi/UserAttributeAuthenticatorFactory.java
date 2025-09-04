@@ -7,11 +7,18 @@ import org.keycloak.models.AuthenticationExecutionModel;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.KeycloakSessionFactory;
 import org.keycloak.provider.ProviderConfigProperty;
+import org.jboss.logging.Logger;
 import java.util.Collections;
 import java.util.List;
 
 public class UserAttributeAuthenticatorFactory implements AuthenticatorFactory {
+    private static final Logger logger = Logger.getLogger(UserAttributeAuthenticatorFactory.class);
     public static final String PROVIDER_ID = "govbr-selo-nivel-authenticator";
+
+    public UserAttributeAuthenticatorFactory() {
+        logger.info("=== UserAttributeAuthenticatorFactory CRIADO ===");
+        System.out.println("=== UserAttributeAuthenticatorFactory CRIADO ===");
+    }
 
     @Override
     public String getDisplayType() {
@@ -32,7 +39,9 @@ public class UserAttributeAuthenticatorFactory implements AuthenticatorFactory {
     public AuthenticationExecutionModel.Requirement[] getRequirementChoices() {
         return new AuthenticationExecutionModel.Requirement[]{
                 AuthenticationExecutionModel.Requirement.REQUIRED,
-                AuthenticationExecutionModel.Requirement.DISABLED
+                AuthenticationExecutionModel.Requirement.ALTERNATIVE,
+                AuthenticationExecutionModel.Requirement.DISABLED,
+                AuthenticationExecutionModel.Requirement.CONDITIONAL
         };
     }
 
@@ -53,26 +62,32 @@ public class UserAttributeAuthenticatorFactory implements AuthenticatorFactory {
 
     @Override
     public Authenticator create(KeycloakSession keycloakSession) {
+        logger.info("=== CRIANDO NOVA INSTANCIA DO UserAttributeAuthenticator ===");
+        System.out.println("=== CRIANDO NOVA INSTANCIA DO UserAttributeAuthenticator ===");
         return new UserAttributeAuthenticator();
     }
 
     @Override
     public void init(Config.Scope scope) {
-        // Não necessário
+        logger.info("=== INIT CHAMADO ===");
+        System.out.println("=== INIT CHAMADO ===");
     }
 
     @Override
     public void postInit(KeycloakSessionFactory keycloakSessionFactory) {
-        // Não necessário
+        logger.info("=== POST INIT CHAMADO ===");
+        System.out.println("=== POST INIT CHAMADO ===");
     }
 
     @Override
     public void close() {
-        // Não necessário
+        logger.info("=== CLOSE CHAMADO ===");
+        System.out.println("=== CLOSE CHAMADO ===");
     }
 
     @Override
     public String getId() {
+        logger.info("=== getId() chamado, retornando: " + PROVIDER_ID + " ===");
         return PROVIDER_ID;
     }
 }
